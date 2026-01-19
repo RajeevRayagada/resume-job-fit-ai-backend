@@ -60,7 +60,7 @@ class ResumeResponse(BaseModel):
 
 agent = Agent(
     model=OpenRouterModel(
-        model_name="mistralai/mistral-7b-instruct"
+        model_name="openai/gpt-4o-mini"
     ),
     system_prompt=(
         "You are a professional resume evaluator.\n"
@@ -73,6 +73,7 @@ agent = Agent(
         "Do not include explanations or extra text."
     ),
 )
+
 
 # --------------------
 # Endpoint
