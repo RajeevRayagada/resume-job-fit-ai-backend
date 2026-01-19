@@ -19,6 +19,19 @@ logger = logging.getLogger(__name__)
 
 app = FastAPI(title="Resume Job Fit AI")
 
+from fastapi.middleware.cors import CORSMiddleware
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[
+        "http://localhost:3000",
+        "https://resume-job-fit-ai-frontend.onrender.com",
+    ],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 # --------------------
 # Models
 # --------------------
