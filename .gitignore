@@ -1,4 +1,13 @@
+# Python
 venv/
 __pycache__/
-.env
 *.pyc
+.env
+
+# Caches
+.cache/
+__pycache__/
+
+# Gradle / Android
+.gradle/
+build/
